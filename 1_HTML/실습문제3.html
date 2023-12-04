@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습문제 3</title>
+  </head>
+  <body>
+    <h2>주문하기</h2>
+
+    <form action="" name="search_form" method="GET">
+      <label for="userName">고객명 : </label>
+      <input type="userName" name="userName" /> <br /><br />
+      <label for="tel">전화번호 : </label>
+      <input type="tel" name="tel" /> <br /><br />
+      <label for="e-mail">E-mail : </label>
+      <input type="e-mail" name="e-mail" />
+
+      <fieldset>
+        <legend>피자 사이즈</legend>
+        <label
+          ><input type="radio" name="size" value="size" /> Small <br /><br
+        /></label>
+        <label><input type="radio" name="size" value="size" /> Medium</label>
+        <br /><br />
+        <label><input type="radio" name="size" value="size" /> Medium</label>
+      </fieldset>
+
+      <fieldset>
+        <legend>토핑 선택</legend>
+        <label
+          ><input type="checkbox" name="pizza" value="topping" />
+          베이컨<br /><br
+        /></label>
+        <label
+          ><input type="checkbox" name="pizza" value="topping" /> 치즈<br /><br
+        /></label>
+        <label
+          ><input type="checkbox" name="pizza" value="topping" /> 양파<br /><br
+        /></label>
+        <label
+          ><input type="checkbox" name="pizza" value="topping" /> 버섯<br /><br
+        /></label>
+      </fieldset>
+
+      <label for="time">희망 배송 시간 : </label>
+      <input type="time" id="time" />
+
+      <h4>배송 시 요청사항:</h4>
+      <textarea cols="25" rows="10" placeholder="내용을 입력하세요"></textarea>
+      <br /><br />
+
+      <button type="order">주문하기</button>
+    </form>
+  </body>
+</html>
