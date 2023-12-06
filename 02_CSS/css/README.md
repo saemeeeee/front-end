@@ -149,7 +149,7 @@ rgba(red(0~255),green(0~255),blue(0~255), alpha(0~1));
 @media 미디어유형 [and 조건] ... {
 }
 @media screen and (min-width: 200px) and (max-width: 360px) {
-  ...;
+  ...
 }
 
 /* 추천! */
