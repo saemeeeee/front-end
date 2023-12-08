@@ -135,3 +135,7 @@ main #host {
 #display {
   display: flex;
 }
+
+#aside-move {
+  margin-top: 30px;
+}
