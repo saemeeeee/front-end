@@ -68,11 +68,12 @@
     <script>
       const max = 15000;
       const cup = 5500;
-      const ame = 2;
+      const ame = parseInt(max / cup);
       const money = max - cup * ame;
       console.log(ame);
       console.log(money);
     </script>
+
     <!-- 
       Q7. 머쓱이네 양꼬치 가게는 10인분을 먹으면 음료수 하나를 서비스로 준다. 양꼬치는 1인분에 12,000원, 음료수는 2,000원이다. 
           양꼬치 64인분과 음료수 6개를 먹었다면 총얼마를 지불해야 하는지 console에 출력하시오.
@@ -80,7 +81,9 @@
     <script>
       const sheep = 12000;
       const bev = 2000;
-      const service = bev * 6;
+      const menu = 64;
+      const bm = 6;
+      const service = parseInt();
       const hap = sheep * 64 + bev * 6 - service;
       console.log(hap);
     </script>
