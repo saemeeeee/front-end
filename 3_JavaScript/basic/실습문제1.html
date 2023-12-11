@@ -83,8 +83,9 @@
       const bev = 2000;
       const menu = 64;
       const bm = 6;
-      const service = parseInt();
-      const hap = sheep * 64 + bev * 6 - service;
+
+      const service = parseInt(menu / 10);
+      const hap = sheep * 64 + bev * 6 - service * bev;
       console.log(hap);
     </script>
   </body>
