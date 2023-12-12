@@ -15,6 +15,15 @@
         if (number % 5 == 0) continue;
         console.log(number);
       }
+
+      let s = 100;
+      for (s = 100; s <= 200; s++) {
+        if (s % 5 == 0) {
+          continue;
+        } else {
+          console.log(s);
+        }
+      }
     </script>
 
     <!-- Q2. 1 ~ 1000 정수 중 3의 배수의 합계를 출력하세요 -->
@@ -58,8 +67,8 @@
       console.log(2 * nums2[0]);
       console.log(2 * nums2[1]);
       console.log(2 * nums2[2]);
-      for (i = 0; (i = 2); i++) {
-        console.log(nums2[i]);
+      for (i = 0; i <= 2; i++) {
+        console.log(2 * nums2[i]);
       }
     </script>
     ​
@@ -78,7 +87,12 @@
     <script>
       const a1 = [12, 0, 2, 5, 4];
       const b1 = [5, 15, 6, 7, 8];
-      console.log();
+      const c1 = [];
+
+      for (i = 0; i <= a1.length - 1; i++) {
+        c1.push(a1[i] * b1[i]);
+      }
+      console.log(c1.toString());
     </script>
 
     ​
@@ -88,6 +102,11 @@
     <script>
       const a2 = [12, 0, 2, 5, 4];
       const b2 = [0, 2, 3, 12, 8];
+      const c2 = [];
+      for (i = 0; i <= a2.length - 1; i++) {
+        c2.push((a2[i] = b2[i]));
+      }
+      console.log(c2.toString());
     </script>
     ​
     <!-- Q10. 2차원 배열에는 3명의 학생의 4과목 성적이 들어 있습니다. 각 학생들의 합계와 평균을 출력하세요 -->
