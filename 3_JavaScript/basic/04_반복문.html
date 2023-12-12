@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>반복문</h1>
+
+    <!-- 
+        for(초기값;조건식;증감식) {} 
+    -->
+    <script>
+      // 1 ~ 10까지 출력하세요
+      // console.log(1);
+      // console.log(2);
+      // .........
+      // console.log(10);
+      // 전위연산자(++n, --n)와 후위연산자 (n++, n--)
+      // 공통점 - 연산 : n = n + 1 , n = n - 1
+      // 차이점! 전위는 계산하고 출력, 후위는 출력하고 계산
+      let num = 2;
+      console.log(num++); // 2
+      console.log(num); // 3
+      console.log(--num); // 2
+      console.log(num); // 2
+
+      // 복합연산자
+      // num 값에 3을 더한 값을 다시 num 에 저장
+      num = num + 3; // 일반적으로 아는 방법
+      console.log(num); // 5
+      num += 3; // 복합대입연산자
+      console.log(num); // 8
+
+      // 초기값 : 어떤 숫자부터
+      // 조건식 : 어떤 숫자까지
+      for (let i = 1; i <= 10; i += 3) {
+        console.log(i);
+      }
+    </script>
+  </body>
+</html>
