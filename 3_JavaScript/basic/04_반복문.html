@@ -110,11 +110,83 @@
       }
     </script>
 
-    <!-- 무한루프 -->
+    <!-- 무한루프 ->  자바에서 다룬다 -->
     <script>
       //   while (true) {
       //     // 조건을 걸어서 조건에 해당되면 안에서 STOP!
       //   }
+      //   let check = 0;
+      //   console.log(check);
+      //   while (confirm("계속 진행하시겠습니까?")) {
+      //     console.log(++check); // true of false로 응답
+      //   }
+    </script>
+    <!-- break와 continue -->
+    <script>
+      // 1 ~ 10까지만 출력
+      //   let number = 1;
+      //   while (true) {
+      //     console.log(number++);
+      //     if (number > 10) {
+      //       break;
+      //     }
+      //   }
+
+      // 1 ~ 10까지 홀수만 출력
+
+      // while 문 !
+      let number = 0;
+      while (true) {
+        number++;
+        if (number == 10) break;
+        if (number % 2 == 0) continue;
+        console.log(number);
+      }
+
+      //   for (let number = 1; number <= 10; number++) {
+      //     if (number === 8) {
+      //       break;
+      //     }
+      //     if (number % 2 == 0) {
+      //       continue;
+      //     }
+      //     console.log(number);
+      //   }
+
+      // if (number > 10) {
+      //   break;
+      // }
+      // if (num % 2 === 0) {
+      //   continue;
+      // } else {
+      //   console.log(number++);
+      // }
+    </script>
+
+    <!-- 2차원 배열 + 중첩 for문 -->
+    <script>
+      const arr = [
+        [1, 2, 3],
+        [4, 5, 6],
+        [7, 8, 9],
+      ];
+      console.log(arr);
+      // 1~9 순서대로 출력해보세요
+      console.log(arr[0]); // [1,2,3]
+      console.log(arr[0][0]); // 1
+      console.log(arr[0][1]); // 2
+      // ....
+      console.log(arr[1][0]); // 4
+      // ..
+      console.log(arr[2][2]); // 9
+
+      // 1 ~ 9 순서대로 출력해보세요 (i, j, k ..)
+
+      for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr[i].length; j++) {
+          console.log(arr[i][j]);
+        }
+      }
     </script>
   </body>
 </html>
