@@ -7,6 +7,15 @@
   </head>
   <body>
     <!-- 
+      변수 명명 규칙 
+      1) 변수명에는 문자, 숫자, 기호는 $, _ 만 사용
+      2) 첫글자에는 숫자 금지
+      3) 예약어(const, if, switch, ...) 금지
+      4) 표기법대로 사용 - camelCase(낙타표기법)
+      5) 상수(const로 표시한 것 X )는 대문자 + snake_case(언더바 표기법) 
+    -->
+
+    <!-- 
         Q1. 킬로그램(kg)을 파운드(lb)로 환산하여 console에 출력하시오.
            - 파운드 = 킬로그램 * 2.2
            예) 킬로그램 : 60  
@@ -25,7 +34,7 @@
     -->
     <script>
       const mm = 99;
-      const pong = 99 * 0.3;
+      const pong = mm * 0.3;
       console.log(pong);
     </script>
 
@@ -61,6 +70,11 @@
       const bn = year - age;
       console.log(bn);
     </script>
+
+    <script>
+      const age2 = 40;
+      console.log(2023 - age2);
+    </script>
     <!-- 
         Q6. 머쓱이는 추운 날에도 아이스 아메리카노만 마신다. 아이스 아메리카노는 한잔에 5,500원이다. 
             머쓱이가 가지고 있는 돈이 15,000원 일 때, 머쓱이가 최대로 마실 수 있는 아메리카노의 잔 수와 남는 돈을 console에 출력하시오.
@@ -72,6 +86,16 @@
       const money = max - cup * ame;
       console.log(ame);
       console.log(money);
+    </script>
+
+    <script>
+      const americano = 5500;
+      const mny = 15000;
+      // 최대 마실 수 있는 잔수
+      const result1 = 15000 / 5500;
+      console.log(parseInt(result1));
+      // 남은 돈
+      console.log(mny % americano);
     </script>
 
     <!-- 
@@ -87,6 +111,14 @@
       const service = parseInt(menu / 10);
       const hap = sheep * 64 + bev * 6 - service * bev;
       console.log(hap);
+    </script>
+
+    <script>
+      const lamb = 64;
+      const drink = 6;
+      const serv = parseInt(lamb / 10);
+      const total = lamb * 12000 + (drink - service) * 2000;
+      console.log(total);
     </script>
   </body>
 </html>
