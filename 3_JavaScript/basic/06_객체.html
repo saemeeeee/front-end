@@ -66,7 +66,45 @@
       console.log(window);
     </script>
 
-    <!-- 생성자(constructor) -->
-    <script></script>
+    <!-- 틀 1 : 생성자(constructor) 함수  -->
+    <script>
+      function Person(name, age) {
+        this.name = name;
+        this.age = age;
+        this.hello = function () {
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        };
+      }
+      const p1 = new Person("도경수", 15);
+      console.log(p1); // Person {name: '도경수', age: 15, hello: ƒ}
+      p1.hello(); // 75번줄에 출력 -> 안녕? 나는 도경수이고, 나이는 15살!
+
+      // walk 라는 기능을 나중에 추가 !
+      Person.prototype.walk = function () {
+        console.log("가볍게 산책 중 ~");
+      };
+
+      const p2 = new Person("정대윤", 18);
+      p2.hello(); // 75번줄에 출력 -> 안녕? 나는 정대윤이고, 나이는 18살!
+    </script>
+
+    <!-- 틀 2 : 클래스 -->
+    <script>
+      class Person2 {
+        // 생성자 -> 객체 생성하는 순간 호출
+        constructor(name, age) {
+          this.name = name;
+          this.age = age;
+        }
+
+        hello() {
+          console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+        }
+      }
+
+      const p3 = new Person2("윤민영", 21);
+      console.log(p3); // Person2 {name: '윤민영', age: 21}
+      p3.hello(); // 101번줄에 출력 -- 안녕? 나는 윤민영이고, 나이는 21살!
+    </script>
   </body>
 </html>
