@@ -49,7 +49,11 @@
       arr = [100, 2, 50];
       arr.sort(); // 작은 숫자부터 큰 숫자로 정렬
       //  문자 정렬은 그대로 사용 ! 숫자 정렬이 문제
-      arr.sort((a, b) => a - b); // 얘는 함수에서 나옵니다 ! (뒤에서 ~~)
+      arr.sort((a, b) => a - b); // 화살표함수
+      arr.sort((a, b) => {
+        return a - b;
+      });
+
       console.log(arr.toString());
 
       arr.reverse(); // 거꾸로 정렬
