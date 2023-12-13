@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        for(let i = 1; i <=10;i++){
+            console.log(i); // 1,2,3,4,5,6,7,8,9,10
+        }
+
+        for(let i = 1; i<=10;i+=3){
+            console.log(i); // 1,4,7,10
+        }
+
+
+
+        const movies = [
+            "서울의 봄",
+            "3일의 휴가",
+            "나폴레옹",
+            "괴물",
+            "싱글 인 서울"
+        ]
+
+        // 영화 제목 하나씩 출력해보기
+        console.log(movies[0]); // 서울의 봄
+        console.log(movies[1]); // 3일의 휴가
+        console.log(movies[2]); // 나폴레옹
+        console.log(movies[3]); // 괴물
+
+        for (i=0;i<=4;i++){
+            console.log(movies[i]); // 
+        }
+        /****/
+        for(let i=0;i<movies.length;i++){
+            console.log(movies[i]);
+        }
+
+        // for in 
+            // for(const index in 배열){}
+            for (const index in movies){
+                console.log(index); // 0 1 2 3 4
+                console.log(movies[index]); // 서울의 봄,  3일의 휴가, 나폴레옹, 괴물, 싱글 인 서울
+            }
+
+
+            // for of
+            // for(const value of 배열){}
+            for(const value of movies){
+                console.log(value); // 서울의 봄,  3일의 휴가, 나폴레옹, 괴물, 싱글 인 서울 
+            }
+
+            for(let i=0;i<movies.length;i++){
+                console.log(movies[i]); // 서울의 봄,  3일의 휴가, 나폴레옹, 괴물, 싱글 인 서울
+            }
+        </script>
+        <script>
+
+            // while (조건) {
+            //     조건이 true면 계속 반복
+            // }
+
+            let i = 0;
+      while (i < movies.length) {
+        console.log(movies[i]); // 서울의 봄,  3일의 휴가, 나폴레옹, 괴물, 싱글 인 서울
+        i++;
+      }
+
+
+    //   무한루프
+
+    // while(true){
+    //     조건을 걸어서 조건에 해당되면 안에서 스탑
+    // }
+
+
+    // 1~10까지 출력
+    for(i=1;i<=10;i++){
+        console.log(i);
+    }
+
+    let number = 1;
+    while(number<=10){
+        console.log(number);
+        i++;
+    }
+
+        </script>
+
+         
+   
+    
+    
+</body>
+</html>

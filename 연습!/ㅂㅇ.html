@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 맨뒤에 추가 - push
+        // 맨앞에 추가 - unshift
+        // 맨 뒤에 데이터 삭제 - pop
+        // 맨 앞에 데이터 삭제 - shift
+        
+        // 원하는 위치에 데이터 추가 - 배열.splice(index,0,추가할 데이터);
+        // 원하는 위치의 데이터 삭제 - 배열.splce(index,1); 
+
+        // 인덱스 찾기 - indexOf(데이터)
+        // 작은 숫자부터 큰 숫자로 정렬 - sort **화살표 함수 써야함
+        // 거꾸로 정렬 - reverse
+
+        let arr=[1,2,3,4,5];
+        console.log(arr); // [1,2,3,4,5]
+        arr.push(6);
+        console.log(arr); // [1,2,3,4,5,6]
+        arr.unshift(7);
+        console.log(arr); // [7,1,2,3,4,5,6]
+        arr.pop();
+        console.log(arr); // [7,1,2,3,4,5]
+        arr.shift();
+        console.log(arr); // [1,2,3,4,5]
+
+        arr.splice(2,0,8);
+        console.log(arr); // [1,2,8,3,4,5]
+        arr.splice(2,1);
+        console.log(arr); // [1,2,3,4,5]
+
+        console.log(arr.indexOf(4)); // 3
+
+        arr=[100,2,50];
+        arr.sort();
+        console.log(arr); //[100,2,50]
+        arr.sort((a,b) => a-b);
+        console.log(arr); // [2,50,100]
+        arr.reverse();
+        console.log(arr); //[100,50,2]
+
+        // 문자열 -> 배열 - split(구분자);
+
+        // 배열 -> 문자열 - join(구분자);
+
+        const strArr = "Hello, JavaScript!";
+        strArr.split(",");
+        console.log(strArr);
+        // strArr.join(" ");
+        // console.log(strArr);
+
+        
+        // 빈 배열에서 시작
+        const number=[];
+        number.push(7); //[7]
+        console.log(number);
+        number.unshift(9);
+        console.log(number); //[9,7]
+        number.push(5);
+        console.log(number);//[9,7,5]
+       
+        // slice(시작 인덱스, 끝 인덱스)
+        const number2=[0,1,2,3,4,5,6,7,8,9,10];
+        const result=number2.slice(3,8);
+        console.log(result); //[3,4,5,6,7] 8까지 아님
+
+        // 하나씩 대응돼서 출력
+        const character = ['짱구','유리','철수','훈이','맹구'];
+        console.log(character[1]); // 유리
+        const [a,b,c,d,e] = character;
+        console.log(d); // 훈이
+    
+
+        
+        </script>
+</body>
+</html>
