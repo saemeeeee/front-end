@@ -57,21 +57,24 @@
       //   console.log(p1); // Person {name: '도경수', age: 15, hello: ƒ}
       //   p1.hello(); // 75번줄에 출력 -> 안녕? 나는 도경수이고, 나이는 15살!
 
-      function music(name, title) {
+      function music1(name, title) {
         this.name = name;
         this.title = title;
-        this.hello = function () {
-          console.log(`${this.name}의 곡 '${this.title}' 발표 !`);
+        this.desc = function () {
+          return `${this.name}의 곡 '${this.title}' 발표 !`;
         };
       }
-      const music = new Music("르세라핌", "Perfect Night");
-      desc.hello();
+      const music = new music1("르세라핌", "Perfect Night");
 
       console.log(music.desc()); // 르세라핌의 곡 'Perfect Night' 발표!
     </script>
 
     <!-- Q5. 프로토타입을 이용하여 발매일(date)를 추가하여 해당 실행 결과와 같이 나오도록 구현하세요 -->
     <script>
+      music.prototype.date = function () {
+        console.log("2023.10.27");
+      };
+
       console.log(music.date); // 2023.10.27
     </script>
   </body>
