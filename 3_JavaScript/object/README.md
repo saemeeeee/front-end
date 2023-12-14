@@ -89,3 +89,12 @@ document.querySelectopAll("선택자");
 const 자식객체 = document.createElement(문서객체이름);
 부모객체.appenChild(자식객체);
 ```
+
+## 문서 객체 삭제하기
+
+- 부모 객체에서 자식 객체를 삭제할 수 있다.
+- 만약 부모 객체에 접근해야 한다면 parentNode를 사용한다.
+
+```js
+부모객체(자식객체.parentNode).removeChild(자식객체);
+```

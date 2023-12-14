@@ -89,4 +89,14 @@ function btn12() {
 
 function btn13() {
   // 자식 객체 생성
+  const p = document.createElement("p");
+  p.innerHTML = "Lorem Ipsum";
+  // 부모 객체에 추가
+  div2.appendChild(p);
+}
+
+function btn14() {
+  const p = document.querySelector("p");
+  //   div2.removeChild(p);
+  p.parentNode.removeChild(p);
 }
