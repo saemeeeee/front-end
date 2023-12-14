@@ -20,8 +20,8 @@
               삼각형의 넓이 = (삼각형의 너비 * 삼각형의 높이) / 2;
     -->
     <script>
-      function triangle(a, b) {
-        return (a * b) / 2;
+      function triangle(width, height) {
+        return (width * height) / 2;
       }
 
       console.log(triangle(5, 8)); // 20
@@ -78,13 +78,56 @@
           return a * 0.95;
         } else if (a >= 50000 && a < 100000) {
           return a * 0.925;
-        } else if (a > 100000) {
+        } else if (a >= 100000) {
           return a * 0.9;
         }
       }
 
+      // 강사님
+
+      function calculate(price) {
+        if (price >= 100000) {
+          // 10만원 이상 -> 뒤에 나오는 조건은 다 10만원 미만
+          return prcie * 0.9;
+        } else if (price >= 50000) {
+          // 5만원 이상 -> 뒤에 나오는 조건은 다 5만원 미만
+          return price * 0.925;
+        } else if (price >= 10000) {
+          // 만원 이상 -> 그 외에는 만원 미만
+          return price * 0.95;
+        }
+        return price;
+      }
+
+      /////////////////////////////////////////
+
+      let rate = 0;
+      if (price >= 100000) {
+        rate = 10;
+      } else if (prcie >= 50000) {
+        rate = 7.5;
+      } else if (price >= 10000) {
+        rate = 5;
+      }
+      return price * ((100 - rate) / 100);
+
+      /////////////////////////////////////////////
+
       console.log(calculate(20000)); // 19000
       console.log(calculate(65000)); // 60125
+    </script>
+
+    <!-- console.log("합계")
+        console.log("합계", 12)
+          console.log("합계", 12, "평균") -->
+    <!-- 가변 매개변수(파라미터) : 안 쓴다 -->
+    <script>
+      function sum(...args) {
+        console.log(args.toString());
+      }
+      sum(10, 20);
+      sum(10, 20, 30);
+      sum(10, 20, 30, 40);
     </script>
   </body>
 </html>
