@@ -20,3 +20,13 @@ function clickHandler() {
   }
 }
 click.addEventListener("click", clickHandler);
+function restartHandler() {
+  for (let i = 0; i < images.length; i++) {
+    images[i].setAttribute("src", `../../02_CSS/resources/spy${random[i]}.jpg`);
+  }
+  click.removeAttribute("disabled");
+  count = 0;
+  span.innerHTML = "";
+  result.innerHTML = "";
+}
+restart.addEventListener("click", restartHandler);
