@@ -26,7 +26,7 @@ function btn4() {
   console.log("월 : ", now.getMonth() + 1); // 12, 0~11
   console.log("일 : ", now.getDate()); // 14
 
-  console.loog("시 : ", now.getHours()); // 11
+  console.log("시 : ", now.getHours()); // 11
   console.log("분 : ", now.getMinutes()); // 43
   console.log("초 : ", now.getSeconds()); // 16
 }
