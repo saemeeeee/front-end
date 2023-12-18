@@ -29,7 +29,38 @@
         function sample2() {
             const num1=200;
             console.log(`sample2 내부 : ${num1}`);
+
+        function sample3() {
+            const num2 = 30000;
         }
+        }
+
+        console.log(`sample2 외부 : ${num1}`); //100
+
+        sample2();  // 호출되는 순간 내부 함수 도출 31번줄 --> 200
+    </script>
+    <script>
+        const minus = function(a,b){
+            return a-b;
+        };
+        console.log(minus(70,30)); // 40
+
+    </script>
+    <script>
+        const minus2 = (a,b)=>{
+            return a-b;
+        };
+        console.log(minus2(100,30)); // 70
+    </script>
+
+    <script>
+        const arr = [1,2,3,4,5,6,7];
+        arr.forEach((data,index,array) =>{
+            console.log(data); // 1,2,3,4,5,6,7
+            console.log(index); // 0,1,2,3,4,5,6
+            console.log(array);// (7) [1,2,3,4,5,6,7]
+        })
+
     </script>
 </body>
 </html>
