@@ -77,18 +77,76 @@
       <button type="reset">취소</button>
     </form>
     <script>
-      const userIdResult = document.querySelector("#userId + span");
-      userId.addEventListener("input", function (e) {
-        // console.log(e);
-        // console.log(e.target.value);
-        console.log(userId.value);
-        // 첫글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4~12자로 입력하시오.
+      function userIdCheck() {
         const regExp = /^[a-zA-Z][a-zA-Z0-9]{3,11}$/;
-        if (regExp.test(userId.value)) {
-          userIdResult.style.color = "green";
+        return regExp.test(userId.value);
+      }
+
+      function userPwdCheck1() {
+        const regExp = /^[!-~]{8,15}$/;
+        return regExp.test(userPwd.value);
+      }
+      function userPwdCheck2() {
+        return userPwd.value === userPwdCheck.value;
+      }
+
+      function userNameCheck() {
+        // 한글로만 이루어져야되며 2글자 이상으로 입력하시오.
+        const regExp = /^[가-힣]{2,}$/;
+        return regExp.test(userName.value);
+      }
+
+      function emailCheck() {
+        // aaaaaa2fa@google.com
+        const regExp = /^\w+@\w+\.\w+$/;
+        return regExp.test(userName.value);
+      }
+
+      // 여기 저기 쓰이는 공통함수 만들기 !
+      function inputHandler(e, check, message) {
+        if (regExp.test(e.target.value)) {
+          e.target.nextElementSibling.style.color = "green";
+          e.target.nextElementSibling.innerHTML = "OK!";
         } else {
-          userIdResult.style.color = "red";
+          e.target.nextElementSibling.style.color = "red";
+          e.target.nextElementSibling.innerHTML = message;
         }
+      }
+
+      userId.addEventListener("input", function (e) {
+        inputHandler(
+          e,
+          userIdCheck(),
+          "첫글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4~12자로 입력하시오."
+        );
+      });
+
+      userId.addEventListener("input", function (e) {
+        inputHandler(
+          e,
+          userIdCheck1(),
+          "영문자, 숫자, 특수문자 포함하여 총 8~15자로 입력하시오."
+        );
+      });
+
+      userPwdCheck.addEventListener("input", function (e) {
+        inputHandler(
+          e,
+          userPwdCheck2(),
+          "위의 비밀번호와 일치하게 입력하시오."
+        );
+      });
+
+      userName.addEventListener("input", function (e) {
+        inputHandler(
+          e,
+          userNameCheck(),
+          "한글로만 이루어져야되며 2글자 이상으로 입력하시오."
+        );
+      });
+
+      email.addEventListener("input", function (e) {
+        inputHandler(e, emailCheck(), "이메일 형식에 맞춰서 입력하시오.");
       });
     </script>
 
