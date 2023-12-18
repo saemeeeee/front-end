@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // function 함수명 (매개변수==파라미터) {return 결과값;}
+        function sample () {
+            console.log("zzzzzzz"); // zzzzzz
+        }
+        sample();    
+
+        function plus(a,b){
+            return a+b;      // plus 정의
+        }
+        const result = plus(10,20);
+        console.log(result);  // 30 출력
+
+        console.log(plus(3,7)); //10
+        console.log(plus(4,9)); // 13
+    </script>
+
+    <script>
+        const num1 = 100;
+
+        function sample2() {
+            const num1=200;
+            console.log(`sample2 내부 : ${num1}`);
+        }
+    </script>
+</body>
+</html>

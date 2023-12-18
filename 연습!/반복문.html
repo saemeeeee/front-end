@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+  
+    
+    <script>
+const movies = [
+    "서울의 봄",
+    "3일의 휴가",
+    "나폴레옹",
+    "괴물",
+    "싱글 인 서울",
+    
+    ];
+
+
+    for(let i =0; i<movies.length; i++) {
+        console.log(movies[i]);
+    }
+    </script>
+
+    <script>
+        for(const index in movies){
+            console.log(index);
+            console.log(movies[index]);
+        }
+    </script>
+
+    <script>
+        for(const value of movies){
+            console.log(value);
+        }
+    </script>
+
+    <script>
+        let i =0;
+        while(i < movies.length){
+            console.log(movies[i]);
+            i++;
+        }
+
+        // 1~10까지만 홀수만 출력
+
+        let number = 0;
+        while(true){
+            number ++;
+            if(number===10) break;
+            if(number%2===0) continue;
+            console.log(number);  // 1 3 5 7 9 
+        }    
+
+        for(let i =1; i<=10; i++){
+            if(i%2===0){
+                continue;
+            }
+            console.log(i);  // 1 3 5 7 9 
+        }
+
+
+    </script>
+
+    <script>
+
+        const arr = [
+            [1,2,3],
+            [4,5,6],
+            [7,8,9],
+        ]
+        console.log(arr);
+
+        console.log(arr[0]); [1,2,3]
+        console.log(arr[0][0]); 1
+        console.log(arr[0][1]); 2
+
+        console.log(arr[1][2]); 6
+
+
+
+
+        // 1~9 순서대로 출력
+
+        for(let i =0; i < arr.length; i++){
+            for(let j=0; j < arr[i].length; j++){
+                console.log(arr[i][j]);   //   1/2/3/4/5/6/7/8/9
+            }
+        }
+    </script>
+    
+    
+</body>
+</html>
