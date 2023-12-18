@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person = {};
+        const person2 = new Object();
+
+        console.log(person); // object
+        console.log(person2); // object
+        // 변수 - 속성, 특징 추가
+        person.name = "조세미";
+        person.age = 9;
+        // 함수에 기능 추가
+        person.hello = function () {
+            console.log(`안녕 ? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+
+        };
+
+        console.log(person); //{name : '조세미', age : 9, hello:f}
+        console.log(person.age);//9
+        person.hello();  // 20번 --> 안녕? 나는 조세미이고, 나이는 9살 !
+
+        const person3 = {
+            name : "조샘이",
+            age : 13,
+            hello:function() {
+                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+            }
+        }
+
+        person3.hello(); // 32번 --> 안녕? 나는 조샘이이고, 나이는 13살!
+        // 객체 속 키 삭제
+        delete person3.hello;
+        console.log(person3);
+        person3.hello; //  {name: '조샘이', age: 13}
+
+        console.log(window);
+
+    </script>
+    <script>
+        function Person(name,age){
+            this.name=name;
+            this.age=age;
+            this.hello = function() {
+                console.log(`안녕? 나는 ${this.name}이고, 나이는 ${this.age}살!`);
+            };
+
+        }
+
+        const p1 = new Person ("도경수", 15);
+        console.log(p1); // Person {name: '도경수', age: 15, hello: ƒ}
+        p1.hello(); // 50번줄 --> 안녕? 나는 도경수이고, 나이는 15살!
+        // walk 기능 나중에 추가
+        Person.prototype.walk = function() {
+            console.log("가볍게 산책 중 ~ ");
+        };
+
+        const p2 = new Person("김정우", 28);
+        p2.hello(); // 50번줄 --> 안녕? 나는 김정우이고, 나이는 28살!
+    </script>
+
+    <script>
+        class Person2 {
+            constructor(name,age){
+                this.name = name;
+                this.age=age;
+            }
+
+            hello() {
+                console.log(`안녕? 나는 ${this.name}이고 나이는 ${this.age}살!`);
+
+            }
+        }
+
+        const p3 = new Person2("윤민영", 21);
+        console.log(p3); // Person2 {name: '윤민영', age: 21}
+        p3.hello(); // 75번줄 --> 안녕? 나는 윤민영이고 나이는 21살!
+    </script>
+
+</body>
+</html>
