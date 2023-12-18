@@ -26,7 +26,7 @@
     </style>
   </head>
   <body>
-    <form action="">
+    <form action="" onsubmit="return validate()">
       <div>
         <label for="userId">* 아이디 : </label>
         <input type="text" id="userId" name="userId" />
@@ -98,11 +98,12 @@
       function emailCheck() {
         // aaaaaa2fa@google.com
         const regExp = /^\w+@\w+\.\w+$/;
+        return regExp.test(email.value);
       }
 
       // 여기 저기 쓰이는 공통함수 만들기 !
       function inputHandler(e, check, message) {
-        if (regExp.test(e.target.value)) {
+        if (check) {
           e.target.nextElementSibling.style.color = "green";
           e.target.nextElementSibling.innerHTML = "OK!";
         } else {
@@ -119,7 +120,7 @@
         );
       });
 
-      userId.addEventListener("input", function (e) {
+      userPwd.addEventListener("input", function (e) {
         inputHandler(
           e,
           userIdCheck1(),
