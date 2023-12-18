@@ -27,7 +27,7 @@
     <link rel="stylesheet" href="./실습문제04.css" />
   </head>
   <body>
-    <form action="">
+    <form action="" onsubmit="return validate()">
       <div>
         <label for="userId">* 아이디 : </label>
         <input type="text" id="userId" name="userId" />
@@ -148,6 +148,27 @@
       email.addEventListener("input", function (e) {
         inputHandler(e, emailCheck(), "이메일 형식에 맞춰서 입력하시오.");
       });
+
+      function validate() {
+        if (!userIdCheck()) {
+          userId.focus();
+          return false;
+        } else if (!userPwdCheck1()) {
+          userPwd.focus();
+          return false;
+        } else if (!userPwdcheck2()) {
+          userPwdCheck.focus();
+          return false;
+        } else if (!userNameCheck()) {
+          userName.focus();
+          return false;
+        } else if (!emailCheck()) {
+          email.focus();
+          return false;
+        }
+
+        return true; // 전송 보내겠다 !
+      }
     </script>
 
     <!-- <h3>* 아이디 :</h3>
