@@ -24,10 +24,9 @@
         margin-left: 12px;
       }
     </style>
-    <link rel="stylesheet" href="./실습문제04.css" />
   </head>
   <body>
-    <form action="" onsubmit="return validate()">
+    <form action="">
       <div>
         <label for="userId">* 아이디 : </label>
         <input type="text" id="userId" name="userId" />
@@ -99,7 +98,6 @@
       function emailCheck() {
         // aaaaaa2fa@google.com
         const regExp = /^\w+@\w+\.\w+$/;
-        return regExp.test(userName.value);
       }
 
       // 여기 저기 쓰이는 공통함수 만들기 !
