@@ -4,27 +4,62 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
+    <link rel="stylesheet" href="./실습문제04.css" />
   </head>
   <body>
-    <h2>* 아이디 :</h2>
-    <input type="text" id="id" />
+    <h3>* 아이디 :</h3>
+    <div id="area1">
+      <input type="text" id="id" />
+      <p>
+        첫 글자는 반드시 영문자로, 그리고 영문자, 숫자 포함하여 총 4 ~ 12자로
+        입력하시오.
+      </p>
+      <script>
+        let regExp =
+      </script>
+    </div>
 
-    <h2>* 비밀번호 :</h2>
-    <input type="text" id="pwd" />
+    <h3>* 비밀번호 :</h3>
+    <div id="area2">
+      <input type="text" id="pwd" />
+      <p>영문자, 숫자, 특수문자 포함하여 총 8~15자로 입력하시오.</p>
+      <script>
+        let;
+      </script>
+    </div>
 
-    <h2>* 비밀번호 확인 :</h2>
+    <h3>* 비밀번호 확인 :</h3>
     <input type="text" id="pwdcheck" />
+    <p>위의 비밀번호와 일치하게 입력하시오.</p>
+    <script></script>
 
-    <h2>* 이름 :</h2>
+    <h3>* 이름 :</h3>
     <input type="text" id="name" />
+    <p>한글로만 이루어져야되며 2글자 이상으로 입력하시오.</p>
+    <script></script>
 
-    <h2>* 이메일 :</h2>
+    <h3>* 이메일 :</h3>
     <input type="text" id="email" />
+    <p>이메일 형식에 맞춰서 입력하시오.</p>
+    <script>
+      let nod =
+        /^[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*@[0-9a-zA-Z]([-_\.]?[0-9a-zA-Z])*\.[a-zA-Z]{2,3}$/i;
+    </script>
 
-    <h2>* 취미 :</h2>
-    <input type="text" id="hobby" />
+    <h3>* 취미 :</h3>
+    <input type="text" placeholder="축구, 농구, 야구, 독서 등" id="hobby" />
+    <script>
+      let;
+    </script>
 
-    <h2>* 거주지 :</h2>
+    <h3>* 거주지 :</h3>
     <input type="text" id="house" />
+    <script></script>
+    <br /><br />
+
+    <button>회원가입</button>
+    <button>취소</button>
+
+    <script src="./js/실습문제04.js"></script>
   </body>
 </html>
