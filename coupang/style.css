@@ -4,10 +4,10 @@
 
 .container {
   width: 1020px;
-  margin: auto; /*완전 가운데 정렬*/
+  margin: auto;
 }
 
-/*tob-bar*/
+/* tob-bar */
 .tob-bar {
   background-color: #f0f0f0;
   display: flex;
@@ -30,7 +30,7 @@ header {
   justify-content: center;
   align-items: center;
 }
-.catergory-btn i {
+.category-btn i {
   font-size: 1.8rem;
   margin-bottom: 10px;
 }
@@ -62,7 +62,6 @@ header {
 .header-main-top form > button {
   position: absolute;
   font-size: 1.2rem;
-
   height: 100%;
   line-height: 100%;
 }
@@ -91,11 +90,10 @@ header {
 .header-main-icon p {
   font-size: 0.8rem;
 }
-
 /* header-main-bottom */
 .header-main-bottom {
   width: 880px;
-  white-space: nowrap; /*줄바꿈이 안되고 한줄로 나타나게 한다.*/
+  white-space: nowrap;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -131,7 +129,7 @@ header {
   top: 0;
   left: 0;
 }
-.header .header-main-bottom i:last-child {
+.header-main-bottom i:last-child {
   top: 0;
   right: 0;
 }
