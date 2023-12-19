@@ -1,0 +1,101 @@
+:root {
+  --main-color: #4285f4;
+}
+
+.container {
+  width: 1020px;
+  margin: auto; /*완전 가운데 정렬*/
+}
+
+/*tob-bar*/
+.tob-bar {
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.8rem;
+  padding: 10px;
+}
+
+/* header */
+header {
+  display: flex;
+}
+.category-btn {
+  background-color: var(--main-color);
+  color: white;
+  width: 160px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 130px;
+}
+.catergory-btn i {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.header-main {
+  width: 100%;
+}
+.header-main-top {
+  display: flex;
+  align-items: center;
+  margin: 30px;
+}
+.logo img {
+  width: 170px;
+}
+.header-main-top form {
+  border: 2px solid var(--main-color);
+  display: flex;
+  position: relative;
+  flex: 1;
+  margin: 0 20px;
+}
+.header-main-top form input {
+  padding: 5px;
+  padding-right: 50px;
+  outline: none;
+  flex: 1;
+}
+.header-main-top form > i,
+.header-main-top form > button {
+  position: absolute;
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  height: 100%;
+  line-height: 100%;
+}
+.header-main-top form > i {
+  top: 0;
+  right: 30px;
+  display: flex;
+  align-items: center;
+  color: #999;
+}
+.header-main-top form > button {
+  top: 0;
+  right: 0;
+  color: var(--main-color);
+  background: none;
+  border: none;
+}
+.header-main-icon {
+  text-align: center;
+  margin-left: 15px;
+}
+.header-main-icon i {
+  color: #555;
+  margin-bottom: 10px;
+}
+.header-main-icon p {
+  font-size: 0.8rem;
+}
+
+/* header-main-bottom */
+.header-main-bottom img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
