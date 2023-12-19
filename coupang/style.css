@@ -21,6 +21,7 @@ header {
   display: flex;
 }
 .category-btn {
+  cursor: pointer;
   background-color: var(--main-color);
   color: white;
   width: 160px;
@@ -28,7 +29,6 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 130px;
 }
 .catergory-btn i {
   font-size: 1.8rem;
@@ -62,8 +62,7 @@ header {
 .header-main-top form > button {
   position: absolute;
   font-size: 1.2rem;
-  display: flex;
-  align-items: center;
+
   height: 100%;
   line-height: 100%;
 }
@@ -94,8 +93,45 @@ header {
 }
 
 /* header-main-bottom */
+.header-main-bottom {
+  width: 880px;
+  white-space: nowrap; /*줄바꿈이 안되고 한줄로 나타나게 한다.*/
+  overflow: hidden;
+  position: relative;
+  display: flex;
+}
+.header-main-bottom a {
+  display: flex;
+  transform: translateX(30px);
+  align-items: center;
+  margin-right: 10px;
+  transition: 2s;
+}
+.header-main-bottom a.header-main-bottom-right {
+  transform: translateX(-375px);
+}
 .header-main-bottom img {
   width: 20px;
   height: 20px;
   object-fit: contain;
+}
+.header-main-bottom i {
+  cursor: pointer;
+  background: white;
+  width: 30px;
+  height: 100%;
+  font-size: 1.2rem;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1;
+}
+.header-main-bottom i:first-child {
+  top: 0;
+  left: 0;
+}
+.header .header-main-bottom i:last-child {
+  top: 0;
+  right: 0;
 }
