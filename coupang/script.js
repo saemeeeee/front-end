@@ -11,3 +11,30 @@ navIcons[1].addEventListener("click", function () {
     a.classList.add("header-main-bottom-right");
   });
 });
+
+// category
+const categoryBtn = document.querySelector(".category-btn");
+const category = document.querySelector(".category");
+
+categoryBtn.addEventListener("mouseenter", function () {
+  category.style.display = "flex";
+});
+// categoryBtn.addEventListener("mouseleae", function () {
+//   category.style.display = "none";
+// });
+category.addEventListener("mouseleave", function () {
+  category.style.display = "none";
+});
+const categoryItems = document.querySelectorAll(".category-item");
+const categorySub = document.querySelector(".category-sub");
+const categorySubItems = document.querySelectorAll(".category-sub-item");
+
+categoryItems.forEach((item, index) => {
+  item.addEventListener("mouseenter", function () {
+    categorySub.style.display = "block";
+    categorySubItems[index].style.display = "block";
+  });
+  item.addEventListener("mouseleave", function () {
+    categorySubItems[index].style.display = "none";
+  });
+});
