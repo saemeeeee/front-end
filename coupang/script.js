@@ -38,3 +38,9 @@ setInterval(() => {
     }
   }
 });
+
+// 사용자가 스크롤을 내리는 순간 어느 시점에 나타나고
+// 다시 올리면 사라지는..!
+window.addEventListener("scroll", function () {
+  console.log(window.pageYOffset);
+});
