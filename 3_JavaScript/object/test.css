@@ -1,0 +1,65 @@
+body {
+  height: 100vh;
+  border: 1px solid black;
+  display: flex;
+  flex-direction: column;
+}
+header {
+  display: flex;
+  height: 50px;
+  border-bottom: 1px solid;
+}
+.header-item {
+  flex: 1; /*균등하게 만듬, DAU DUA만 2배*/
+  text-align: center;
+  line-height: 50px;
+}
+.header-item h1 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.header-item:nth-child(4) {
+  flex: 2;
+}
+.header-item:not(.header-item:last-child) {
+  border-right: 1px solid;
+}
+/* .header-item:last-child {
+  border: none;
+} */
+
+nav {
+  height: 40px;
+  border-bottom: 1px solid;
+  line-height: 40px;
+  padding-left: 20px;
+}
+main {
+  height: 100%;
+  display: flex;
+}
+main > div {
+  flex: 1;
+}
+.main-left {
+  background: url(./exam.jpg);
+  background-position: cover;
+
+  border-right: 1px solid;
+}
+.main-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.main-right h2 {
+  font-size: 4rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+.main-right p {
+  line-height: 1.5;
+  width: 80%;
+}
